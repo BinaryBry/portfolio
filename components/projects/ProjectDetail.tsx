@@ -21,7 +21,7 @@ export function ProjectDetail({ project: p }: { project: Project }) {
   const sections: { title: string; body: ReactNode }[] = [];
 
   sections.push({
-    title: "The problem",
+    title: p.problemHeading ?? "The problem",
     body: <p className="text-pretty text-[17px] leading-[1.75] text-muted">{p.problem}</p>,
   });
 

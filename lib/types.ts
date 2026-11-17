@@ -55,6 +55,8 @@ export interface Project {
   accent: Accent;
   summary: string;
   problem: string;
+  /** Heading for the `problem` section on the project page. Defaults to "The problem". */
+  problemHeading?: string;
   contribution: Content;
   stack: string[];
   /** Things that work today */

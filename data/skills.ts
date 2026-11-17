@@ -10,10 +10,10 @@ export const skillGroups: SkillGroup[] = [
     title: "Languages",
     skills: [
       { name: "Python", usedIn: ["CareerPilot"] },
-      { name: "Java", usedIn: ["Code Warriors", "JavaFX apps"] },
-      { name: "JavaScript", usedIn: ["Deal or No Deal"] },
+      { name: "Java", usedIn: ["Code Warriors", "Deal or No Deal", "JavaFX apps"] },
+      { name: "JavaScript", usedIn: ["Deal or No Deal (original)"] },
       { name: "SQL", usedIn: ["CareerPilot"] },
-      { name: "HTML / CSS", usedIn: ["CareerPilot", "Deal or No Deal"] },
+      { name: "HTML / CSS", usedIn: ["CareerPilot"] },
       { name: "C++", learning: true },
     ],
   },
@@ -24,7 +24,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "Flask-SQLAlchemy", usedIn: ["CareerPilot"] },
       { name: "Jinja2", usedIn: ["CareerPilot"] },
       { name: "Bootstrap", usedIn: ["CareerPilot"] },
-      { name: "JavaFX", usedIn: ["JavaFX apps"] },
+      { name: "JavaFX", usedIn: ["Deal or No Deal", "JavaFX apps"] },
     ],
   },
   {

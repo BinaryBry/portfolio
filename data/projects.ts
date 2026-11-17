@@ -175,67 +175,64 @@ export const projects: Project[] = [
   {
     slug: "deal-or-no-deal",
     name: "Deal or No Deal",
-    kicker: "JavaScript browser game",
-    tagline: "The game show, rebuilt in the browser: pick a case, open the rest, face the banker.",
+    kicker: "Java & JavaFX",
+    tagline: "My high school senior project, rebuilt as a Java desktop game.",
     stage: "built",
-    stageLabel: "JavaScript",
+    stageLabel: "Java · JavaFX",
     accent: "pink",
     summary:
-      "A browser version of the briefcase-selection and offer-evaluation game, built in JavaScript on Code.org, with original graphics for every screen.",
+      "Originally created as my high school senior project using Code.org, where I designed the interface and developed the game's mechanics from scratch. In 2026, I revisited the concept and developed an updated take on the original game using Java and JavaFX.",
+    problemHeading: "The 2026 version",
     problem:
-      "The game only works if it feels fair and tense: hidden values have to be truly random, the game state has to stay consistent across rounds, and the banker's offer has to react to what's left on the board.",
+      "This version introduces a redesigned interface, interactive briefcases, randomized case values, and a dynamic banker offer system while applying object-oriented programming and event-driven development. This project highlights my growth as a developer, combining an original idea with the programming skills and technologies I've learned since high school.",
     contribution:
-      "I designed the graphics and every screen of the interface, from briefcase selection through the banker's offer, and wrote the game logic.",
-    stack: ["JavaScript", "HTML", "CSS", "Code.org"],
+      "I created the original on Code.org (interface and game mechanics), then revisited the concept and developed the Java and JavaFX version in 2026.",
+    stack: ["Java", "JavaFX", "Maven"],
     features: [
-      "Hidden case values assigned with arrays and randomization",
-      "Interactive briefcase selection",
-      "Core game loop: round-by-round case opening with remaining-value tracking",
-      "Banker offers that evaluate the remaining values each round",
-      "Custom graphics and UI for every screen",
+      "Interactive briefcases: pick your case, then open the rest",
+      "Prize values shuffled into the 26 cases every game",
+      "Live prize board that crosses off opened values",
+      "Banker offers after each round based on the values still in play",
+      "Keep-or-swap decision when two cases remain, plus a New Game reset",
     ],
-    results: [
-      "Refactored the game into modular functions for clarity and reuse.",
-    ],
+    results: [],
     links: {
-      github: undefined,
-      demo: todo("Add the Code.org share link so people can play it"),
-      demoLabel: "Play it",
+      github: "https://github.com/BinaryBry/deal-or-no-deal",
     },
     images: [],
     imageTodo:
-      "Add screenshots of the case board and the banker's offer screen to /public/projects/deal-or-no-deal/.",
+      "Run the game and add screenshots of the case board and the banker's offer to /public/projects/deal-or-no-deal/.",
     glance: [
-      { label: "Role", value: "Design + development" },
-      { label: "Platform", value: "Code.org (JavaScript)" },
-      { label: "Focus", value: "Game state + interaction" },
+      { label: "Original", value: "High school senior project (Code.org)" },
+      { label: "Rebuilt", value: "2026 in Java & JavaFX" },
+      { label: "Focus", value: "Game state + event-driven UI" },
     ],
     architecture: [
       {
-        title: "State in one place",
-        body: "Case values live in an array that's shuffled at the start of a game. Opening a case removes its value from the remaining set, so the board, the remaining-value list, and the banker all read from the same source.",
+        title: "Shuffled values, one source of truth",
+        body: "At the start of each game the 26 prize amounts are shuffled into the cases. The opened cases, your chosen case, and the current round live in the app's state, and the board, prize list, and labels all update from it.",
       },
       {
-        title: "Round-based loop",
-        body: "Each round asks the player to open a set number of cases, then calls the banker. The banker's offer is calculated from the values that are still in play.",
+        title: "Round-based banker",
+        body: "Rounds open 6, 5, 4, 3, 2, then 1 case at a time. Each offer starts from the average of the values still in play and multiplies it by a percentage that rises every round, so offers get closer to the expected value as the game goes on.",
       },
       {
-        title: "Refactor into functions",
-        body: "Selection, opening, offer calculation, and screen changes were split into separate functions so each piece could be changed without breaking the others.",
+        title: "Event-driven JavaFX",
+        body: "Every briefcase and button is a JavaFX control with its own event handler. The game only advances in response to the player's clicks: choose, open, Deal, No Deal, keep, or swap.",
       },
     ],
     challenges: [
       {
-        challenge: todo("How did you decide the banker's offer formula? (e.g. a percentage of the average remaining value that rises each round)"),
-        approach: todo("What did you try, and how did you make the offers feel realistic?"),
+        challenge: todo("What was different about building this in Java/JavaFX compared to the original on Code.org?"),
+        approach: todo("What did you change or improve in the rebuild, and why?"),
       },
       {
-        challenge: todo("What did the refactor into modular functions fix? What was messy before?"),
-        approach: todo("How did you split it up?"),
+        challenge: todo("How did you decide the banker's offer formula?"),
+        approach: todo("What did you try, and how did you make the offers feel realistic?"),
       },
     ],
     learned: [
-      todo("What building a game taught you about managing state."),
+      todo("What revisiting your senior project showed you about how much you've grown as a developer."),
     ],
   },
 
