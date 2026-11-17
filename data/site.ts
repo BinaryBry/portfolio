@@ -31,8 +31,13 @@ export const site = {
   // Drop a new PDF into /public with this name to update it everywhere.
   resume: "/Bryant-Clarke-Resume.pdf",
 
-  // Set NEXT_PUBLIC_SITE_URL in Vercel once you have a domain.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  // On Vercel this is your production address automatically (custom domain if you add one).
+  // Set NEXT_PUBLIC_SITE_URL to override it.
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "http://localhost:3000"),
 
   headshot: {
     src: "/images/bryant-clarke-headshot.jpg",

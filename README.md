@@ -32,10 +32,8 @@ npm run typecheck  # TypeScript only
 
 1. Push this folder to a new GitHub repo.
 2. Go to [vercel.com/new](https://vercel.com/new), import the repo, and click **Deploy**. No settings needed.
-3. Once you have a domain (or your `*.vercel.app` URL), add an environment variable in
-   Vercel → Project → Settings → Environment Variables:
-   `NEXT_PUBLIC_SITE_URL = https://your-domain.com`
-   This makes link previews, `sitemap.xml`, and `robots.txt` use the right URL.
+3. That's it. Link previews, `sitemap.xml`, and `robots.txt` automatically use your Vercel address
+   (or your custom domain, once you add one). To force a specific URL, set `NEXT_PUBLIC_SITE_URL`.
 
 ---
 
@@ -107,7 +105,6 @@ the web version.
 - [ ] Confirm solo/team for Code Warriors and the JavaFX apps
 - [ ] Best Buy and New Balance role titles and dates
 - [ ] Read the About section out loud and change anything that doesn't sound like you
-- [ ] Set `NEXT_PUBLIC_SITE_URL` in Vercel
 
 ---
 
