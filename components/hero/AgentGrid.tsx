@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 /**
- * A faint dot grid with three rule-based "agents", a quiet nod to Code Warriors.
+ * A faint dot grid with three small rule-based "agents" moving across it.
  *  - pink:   Aggressive. Chases the collector.
  *  - violet: Resource Collector. Heads for the nearest resource.
  *  - white:  Defensive. Keeps its distance from the aggressor.

@@ -98,11 +98,9 @@ the web version.
 ## 5. Checklist before you share the link
 
 - [ ] GitHub profile URL in `data/site.ts`
-- [ ] GitHub repo URLs for CareerPilot, Code Warriors, and the JavaFX apps
 - [ ] Code.org share link for Deal or No Deal
 - [ ] 2–3 real CareerPilot screenshots
 - [ ] Answer the **Challenges** and **What I learned** prompts for each project (great interview prep)
-- [ ] Confirm solo/team for Code Warriors and the JavaFX apps
 - [ ] Best Buy and New Balance role titles and dates
 - [ ] Read the About section out loud and change anything that doesn't sound like you
 
@@ -121,7 +119,7 @@ components/
   layout/                 Navbar (scroll-spy, mobile menu), Footer
   sections/               Hero, Projects, About, Skills, Experience, Contact
   projects/               CareerPilotDemo, ProjectDetail, ProjectArt, ProjectLinks
-  hero/AgentGrid.tsx      the animated grid behind the hero (a nod to Code Warriors)
+  hero/AgentGrid.tsx      the animated dot grid behind the hero
   ui/                     Button, Reveal, SectionHeading, Tag, Todo, CopyEmail, Spotlight, MotionProvider
 data/                     ← all your content
 lib/                      types + helpers

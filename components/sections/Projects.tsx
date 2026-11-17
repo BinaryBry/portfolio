@@ -10,6 +10,14 @@ import { ProjectArt } from "@/components/projects/ProjectArt";
 import { ProjectLinks } from "@/components/projects/ProjectLinks";
 import { Button } from "@/components/ui/Button";
 
+// One secondary project gets a wide card; two or three share a row.
+const gridCols: Record<number, string> = {
+  0: "hidden",
+  1: "md:grid-cols-1",
+  2: "md:grid-cols-2",
+  3: "md:grid-cols-3",
+};
+
 export function Projects() {
   return (
     <section id="work" className="relative py-24 md:py-36">
@@ -98,11 +106,14 @@ export function Projects() {
         </Reveal>
 
         {/* Other projects */}
-        <div className="mt-6 grid gap-6 md:grid-cols-3">
+        <div className={`mt-6 grid gap-6 ${gridCols[Math.min(otherProjects.length, 3)]}`}>
           {otherProjects.map((p, i) => (
             <Reveal key={p.slug} delay={0.08 * i} className="h-full">
               <Spotlight className="group h-full rounded-[24px] border border-line bg-surface/60 transition-colors duration-500 hover:border-line-strong">
-                <Link href={`/projects/${p.slug}`} className="flex h-full flex-col">
+                <Link
+                  href={`/projects/${p.slug}`}
+                  className={`flex h-full flex-col ${otherProjects.length === 1 ? "md:grid md:grid-cols-[1.1fr_1fr] md:items-center" : ""}`}
+                >
                   <div className="relative m-2 aspect-[16/10] overflow-hidden rounded-[18px] border border-line bg-ink/60">
                     <div className="absolute inset-0 transition-transform duration-700 ease-out-soft group-hover:scale-[1.03]">
                       <ProjectArt slug={p.slug} />

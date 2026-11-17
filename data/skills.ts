@@ -10,7 +10,7 @@ export const skillGroups: SkillGroup[] = [
     title: "Languages",
     skills: [
       { name: "Python", usedIn: ["CareerPilot"] },
-      { name: "Java", usedIn: ["Code Warriors", "Deal or No Deal", "JavaFX apps"] },
+      { name: "Java", usedIn: ["Deal or No Deal"] },
       { name: "JavaScript", usedIn: ["Deal or No Deal (original)"] },
       { name: "SQL", usedIn: ["CareerPilot"] },
       { name: "HTML / CSS", usedIn: ["CareerPilot"] },
@@ -24,7 +24,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "Flask-SQLAlchemy", usedIn: ["CareerPilot"] },
       { name: "Jinja2", usedIn: ["CareerPilot"] },
       { name: "Bootstrap", usedIn: ["CareerPilot"] },
-      { name: "JavaFX", usedIn: ["Deal or No Deal", "JavaFX apps"] },
+      { name: "JavaFX", usedIn: ["Deal or No Deal"] },
     ],
   },
   {
@@ -50,8 +50,8 @@ export const skillGroups: SkillGroup[] = [
   {
     title: "Concepts",
     skills: [
-      { name: "Object-oriented programming", usedIn: ["Code Warriors", "JavaFX apps"] },
-      { name: "Event-driven programming", usedIn: ["JavaFX apps"] },
+      { name: "Object-oriented programming", usedIn: ["Deal or No Deal"] },
+      { name: "Event-driven programming", usedIn: ["Deal or No Deal"] },
       { name: "Data structures & algorithms" },
       { name: "Full-stack web development", usedIn: ["CareerPilot"] },
     ],
