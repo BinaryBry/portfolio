@@ -78,5 +78,5 @@ export const education = {
   status: "Expected 2029",
   honors: ["National Technology Honor Society, Member"],
   // VERIFY course details. Add more as you take them.
-  coursework: ["COMP 167: Java, OOP & JavaFX"],
+  coursework: ["COMP 163: Python", "COMP 167: Java, OOP & JavaFX"],
 };
